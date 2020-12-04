@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     
+    <title>图片切换</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button>切换</button>
+   <img src="dummy/xier.png" width="170" style="position: fixed;top: 100px;right: 10px">
+    <script>
+        //onmouseenter   onmouseleave
+        var oImg=document.querySelector('img');
+        document.querySelector('button').onclick=function(){
+            oImg.src="dummy/xier.jpg";//修改属性
+        };
+        //鼠标进入
+        oImg.onmouseenter=function(){
+            // console.log('enter');
+            this.src="dummy/xier2.png";
+        };
+        //鼠标移出
+        oImg.onmouseleave=function(){
+            this.src="dummy/xier.png";
+        };
+    </script>
+</body>
+</html>
